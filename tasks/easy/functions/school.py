@@ -14,6 +14,29 @@
 - Функция calc_students, которая принимает SCHOOL_DATA и возвращает кол-во
     учеников во всей школе
 """
+
+
+def incr_students(SCHOOL_DATA: dict, sch_class: str) -> dict:
+    return SCHOOL_DATA.update({sch_class: SCHOOL_DATA.get(sch_class) + 1})
+
+
+def dect_students(SCHOOL_DATA: dict, sch_class: str) -> dict:
+    return SCHOOL_DATA.update({sch_class: SCHOOL_DATA.get(sch_class) - 1})
+
+
+def add_class(SCHOOL_DATA: dict, sch_class: str) -> dict:
+    return SCHOOL_DATA.update({SCHOOL_DATA: 0})
+
+
+def remove_class(SCHOOL_DATA: dict, sch_class: str) -> dict:
+    SCHOOL_DATA.pop(sch_class)
+    return SCHOOL_DATA
+
+
+def calc_students(school_data_1: dict) -> int:
+    return sum(school_data_1.values())
+
+
 school_data = {
     '1a': 15,
     '1b': 23,

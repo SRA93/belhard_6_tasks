@@ -4,3 +4,13 @@
 значением. Предполагается, что элементы списка будут соответствовать
 правилам задания ключей в словарях.
 """
+
+
+def to_dict(list_one: list):
+
+    result = {i: i for i in list_one}
+
+    return result
+
+
+print(to_dict([1, 5, 9, 12]))

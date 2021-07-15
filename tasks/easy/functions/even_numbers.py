@@ -7,3 +7,8 @@
 - get_even_number(10) -> 20
 - get_even_number(3) -> 6
 """
+
+
+def get_even_number(number: int):
+    even = number * 2
+    return even

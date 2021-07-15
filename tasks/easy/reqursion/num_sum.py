@@ -3,3 +3,14 @@
 
 Можно пользоваться только функциями, операторами и условиями
 """
+
+
+def summ_of(num, x=0):
+    if not num:
+        return x
+    x += num % 10
+    num //= 10
+    return summ_of(num, x)
+
+
+print(summ_of(45545))
