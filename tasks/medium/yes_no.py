@@ -6,11 +6,16 @@
 
 def yes_or_no(list_one: list):
 
-    if len(list_one) > len(set(list_one)):
-        print('Yes')
+    gen_list = []
 
-    else:
-        print('No')
+    for i in list_one:
+
+        if i not in gen_list:
+            print('No')
+            gen_list.append(i)
+
+        else:
+            print('Yes')
 
 
-yes_or_no([2, 3, 6, 7, 33, 5, 2])
+yes_or_no([2, 3, 6, 3, 33, 5, 2])

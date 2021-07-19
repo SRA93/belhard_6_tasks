@@ -10,9 +10,15 @@ next(even_gen) -> 4
 next(even_gen) -> 6
 """
 
-i = 2
-while i <= 40:  # до какого числа продолжать генерацию
 
-    if i % 2 == 0:
-        print(i)
-    i += 1
+def get_even_number(i=2):
+    while i <= 40:  # до какого числа продолжать генерацию
+        yield i
+        i += 2
+
+
+even_gen = get_even_number()
+
+print(next(even_gen))
+print(next(even_gen))
+print(next(even_gen))

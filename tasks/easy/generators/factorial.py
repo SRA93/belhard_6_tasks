@@ -12,15 +12,19 @@ next(factorial_gen) -> 24
 """
 
 
-def factorial(n):
-    res = 1
+def factorial():
+    n = 1
+    while True:
+        res = 1
+        for i in range(1, n + 1):
+            res *= i
+        yield res
+        n += 1
 
-    for i in range(1, n + 1):
-        res *= i
-    return res
 
+factorial_next = factorial()
 
-print(factorial(1))
-print(factorial(2))
-print(factorial(3))
-print(factorial(4))
+print(next(factorial_next))
+print(next(factorial_next))
+print(next(factorial_next))
+print(next(factorial_next))

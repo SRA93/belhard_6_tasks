@@ -16,25 +16,25 @@
 """
 
 
-def incr_students(SCHOOL_DATA: dict, sch_class: str) -> dict:
-    return SCHOOL_DATA.update({sch_class: SCHOOL_DATA.get(sch_class) + 1})
+def incr_students(school_data: dict, sch_class: str):
+    return school_data.update({sch_class: school_data.get(sch_class) + 1})
 
 
-def dect_students(SCHOOL_DATA: dict, sch_class: str) -> dict:
-    return SCHOOL_DATA.update({sch_class: SCHOOL_DATA.get(sch_class) - 1})
+def dect_students(school_data: dict, sch_class: str):
+    return school_data.update({sch_class: school_data.get(sch_class) - 1})
 
 
-def add_class(SCHOOL_DATA: dict, sch_class: str) -> dict:
-    return SCHOOL_DATA.update({SCHOOL_DATA: 0})
+def add_class(school_data: dict):
+    return school_data.update({school_data: 0})
 
 
-def remove_class(SCHOOL_DATA: dict, sch_class: str) -> dict:
-    SCHOOL_DATA.pop(sch_class)
-    return SCHOOL_DATA
+def remove_class(school_data: dict, sch_class: str):
+    school_data.pop(sch_class)
+    return school_data
 
 
-def calc_students(school_data_1: dict) -> int:
-    return sum(school_data_1.values())
+def calc_students(school_data: dict) -> int:
+    return sum(school_data.values())
 
 
 school_data = {
